@@ -1,29 +1,14 @@
-<!DOCTYPE html>
-
+<!DOCTYPE HTML>
 <!--
-  portfolYOU Jekyll theme by Youssef Raafat
-  Free for personal and commercial use under the MIT license
-  https://github.com/YoussefRaafatNasry/portfolYOU
+Prologue by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Jekyll integration by Chris Bobbe | chrisbobbe.github.io
 -->
-
-<html lang="en" class="h-100">
-
-{% include head.html %}
-
-<body class="h-100 d-flex flex-column">
-
-  <main class="flex-shrink-0 container mt-5">
-    {% include navbar.html %}
-    {{ content }}
-  </main>
-  {% include footer.html %}
-
-  {% include analytics.html %}
-  {% include scripts.html %}
-
-  {%- if site.buymeacoffee.enabled == true -%}
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="{{ site.buymeacoffee.username }}" data-description="{{ site.buymeacoffee.description }}" data-message="{{ site.buymeacoffee.message }}" data-color="{{ site.buymeacoffee.color }}" data-position="Right" data-x_margin="16" data-y_margin="16"></script>
-  {%- endif -%}
-</body>
-
+<html>
+	{%- include head.html -%}
+	<body>
+		{{- content -}}
+		{%- include footer.html -%}
+	</body>
 </html>

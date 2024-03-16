@@ -1,16 +1,13 @@
-<footer class="mt-auto py-3 text-center">
-
-  <small class="text-muted mb-2">
-    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
-    by <strong>{{ site.author.name }}</strong>
-  </small>
-
-  {% include social.html %}
-
-  {%- assign theme_name = "portfolYOU" -%}
-  {%- assign theme_repo = "https://github.com/YoussefRaafatNasry/portfolYOU" -%}
-  <small id="attribution">
-    theme <a href="{{ theme_repo }}">{{ theme_name }}</a>
-  </small>
-
-</footer>
+<!-- Footer -->
+<div id="footer">
+  
+  <!-- Copyright -->
+  <ul class="copyright">
+    {% if site.title or site.author %}
+      <li>&copy; {{- site.title | default: site.author -}}. All rights reserved.</li>
+    {% endif %}
+    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    <li>Jekyll integration: <a href="https://chrisbobbe.github.io/">Chris Bobbe</a></li>
+  </ul>
+  
+</div>
