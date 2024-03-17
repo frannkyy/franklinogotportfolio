@@ -1,0 +1,70 @@
+---
+title: Social Media Manager
+layout: post
+icon: fa-users
+---
+<style>
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .gallery img.zoomed {
+    transform: scale(1.5);
+    z-index: 1;
+  }
+  </style>
+<!-- Text stuff -->
+<h2>Social Media Manager</h2>
+<p>As a Social Media Manager in Vera Equinox Technologies, I  manage the social media pages in this company, where I create and edit images to be posted in our social media pages, I also manage the ADS in the Facebook Page.
+</p>
+	<hr />
+	<!-- Lists -->
+	<h2>Social Media Manager Projects</h2>
+		<div class="container">
+				<div class="gallery">
+				<img src="{{ 'assets/images/smm/img1.jpg' | relative_url }}">
+				<img src="{{ 'assets/images/smm/img2.jpg' | relative_url }}">
+				<img src="{{ 'assets/images/smm/img3.jpg' | relative_url }}">
+				<img src="{{ 'assets/images/smm/img4.jpg' | relative_url }}">
+				<img src="{{ 'assets/images/smm/img5.jpg' | relative_url }}">
+				<img src="{{ 'assets/images/smm/img6.jpg' | relative_url }}">
+				<img src="{{ 'assets/images/smm/bc1.jpg' | relative_url }}">
+				<img src="{{ 'assets/images/smm/bc2.jpg' | relative_url }}">
+				<img src="{{ 'assets/images/smm/bc3.jpg' | relative_url }}">
+				<img src="{{ 'assets/images/smm/img7.jpg' | relative_url }}">
+				<img src="{{ 'assets/images/smm/img8.jpg' | relative_url }}">
+				<img src="{{ 'assets/images/smm/img9.jpg' | relative_url }}">
+				<img src="{{ 'assets/images/smm/img10.jpg' | relative_url }}">
+				<img src="{{ 'assets/images/smm/img11.jpg' | relative_url }}">
+				<img src="{{ 'assets/images/smm/img12.jpg' | relative_url }}">
+				  <!-- Add more images as needed -->
+				</div>
+			  </div>
+
+
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".gallery img");
+    images.forEach(function (image) {
+      image.addEventListener("click", function () {
+        images.forEach(function (img) {
+          img.classList.remove("zoomed");
+        });
+        this.classList.toggle("zoomed");
+      });
+    });
+  });
+</script>

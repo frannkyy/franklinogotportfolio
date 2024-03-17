@@ -1,0 +1,85 @@
+---
+title: Web Developer
+layout: post
+icon: fa-globe
+---
+<style>
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .gallery img.zoomed {
+    transform: scale(1.5);
+    z-index: 1;
+  }
+  </style>
+<!-- Text stuff -->
+<h3>Web Development Projects</h3>
+<p>As a <strong>Web Developer</strong> in Vera Equinox Technologies, Inc., I contributed on
+	the website for the product called BiosCreator, I also worked
+	on the website for the trainings that our company conducts
+	called Leaky Mosfet Training.</p>
+	<hr />
+	
+	<div class="row">
+		<div class="6u 12u$(small)">
+			
+			<div class="container">
+				<h1>BiosCreator | Web Project 1</h1>
+				<hr>
+				<div class="gallery">
+				<img src="{{ 'assets/images/web/bc1.png' | relative_url }}">
+				<img src="{{ 'assets/images/web/bc2.png' | relative_url }}">
+				<img src="{{ 'assets/images/web/bc3.png' | relative_url }}">
+				  <!-- Add more images as needed -->
+				</div>
+			  </div>
+
+			  <div class="container">
+				<h1>LeakyMosfet Trainnig | Web Project 2</h1>
+				<hr>
+				<div class="gallery">
+				<img src="{{ 'assets/images/web/lm1.png' | relative_url }}">
+				<img src="{{ 'assets/images/web/lm2.png' | relative_url }}">
+				<img src="{{ 'assets/images/web/lm3.png' | relative_url }}">
+				  <!-- Add more images as needed -->
+				</div>
+			  </div>
+
+			  <div class="container">
+				<h1>Disease Prediction | Web Project 3</h1>
+				<hr>
+				<div class="gallery">
+				<img src="{{ 'assets/images/web/dp1.png' | relative_url }}">
+				<img src="{{ 'assets/images/web/dp2.png' | relative_url }}">
+				<img src="{{ 'assets/images/web/dp3.png' | relative_url }}">
+				  <!-- Add more images as needed -->
+				</div>
+			  </div>
+
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".gallery img");
+    images.forEach(function (image) {
+      image.addEventListener("click", function () {
+        images.forEach(function (img) {
+          img.classList.remove("zoomed");
+        });
+        this.classList.toggle("zoomed");
+      });
+    });
+  });
+</script>
